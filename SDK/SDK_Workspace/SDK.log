@@ -204,3 +204,27 @@
 12:04:21.648 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
 12:06:35.739 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
 12:12:38.210 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+13:48:45.115 INFO  - Processing command line option -hwspec D:\RA31-2016\LPRS2\EthernetTest\lab5\SDK\SDK_Export\hw\system.xml. 
+13:48:47.990 INFO  - The hardware specification for project 'basic_system_hw_platform' is different from D:\RA31-2016\LPRS2\EthernetTest\lab5\SDK\SDK_Export\hw\system.xml. 
+13:48:48.055 INFO  - Copied contents of D:\RA31-2016\LPRS2\EthernetTest\lab5\SDK\SDK_Export\hw\system.xml into \basic_system_hw_platform\system.xml. 
+13:48:48.059 INFO  - Copied contents of D:\RA31-2016\LPRS2\EthernetTest\lab5\SDK\SDK_Export\hw\system.bit into \basic_system_hw_platform\system.bit. 
+13:48:48.061 INFO  - Copied contents of D:\RA31-2016\LPRS2\EthernetTest\lab5\SDK\SDK_Export\hw\system_bd.bmm into \basic_system_hw_platform\system_bd.bmm. 
+13:48:48.651 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+13:48:49.963 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+13:48:50.115 INFO  - Updating MSS for Board Support Package Project: hello_world_bsp.
+		 The following new driver assignments were made:
+			Peripheral Instance: axi_ethernetlite_0, driver: emaclite_v3_04_a.
+			Peripheral Instance: axi_intc_0, driver: intc_v2_06_a.
+ 
+13:48:51.061 INFO  - Updating hardware inferred compiler options for hello_world. 
+13:48:51.076 INFO  - Clearing existing target manager status. 
+13:48:53.593 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+13:49:12.477 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:48:11.048 INFO  - Project basic_system_hw_platform's source hardware specification located at D:\RA31-2016\LPRS2\EthernetTest\lab5\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+10:48:17.803 INFO  - Project basic_system_hw_platform's source hardware specification location will not be monitored anymore. 
+10:48:19.403 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+10:50:22.927 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
