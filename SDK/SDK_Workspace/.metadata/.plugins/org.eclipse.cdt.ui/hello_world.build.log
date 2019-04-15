@@ -1,4 +1,4 @@
-11:13:54 **** Auto Build of configuration Debug for project hello_world ****
+11:20:43 **** Auto Build of configuration Debug for project hello_world ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -15,7 +15,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -ml
 'Invoking: MicroBlaze Print Size'
 mb-size hello_world.elf  |tee "hello_world.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   5706	    268	   2098	   8072	   1f88	hello_world.elf
+   5682	    268	   2098	   8048	   1f70	hello_world.elf
 'Finished building: hello_world.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -32,5 +32,5 @@ elfcheck passed.
 'Finished building: hello_world.elf.elfcheck'
 ' '
 
-11:13:55 Build Finished (took 1s.428ms)
+11:20:45 Build Finished (took 1s.324ms)
 

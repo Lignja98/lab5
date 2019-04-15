@@ -258,3 +258,10 @@
 11:13:39.371 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
 11:14:04.907 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
 11:14:28.854 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:17:00.260 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:17:36.640 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:17:49.021 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:18:17.347 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:19:00.858 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:20:53.741 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:22:26.369 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

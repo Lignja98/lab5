@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="18" version="2.0">
+<workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
 <window height="1040" maximized="true" width="1375" x="62" y="-14">
 <fastViewData fastViewLocation="1024"/>
@@ -44,7 +44,7 @@
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/hello_world/src/helloworld.c" title="helloworld.c" tooltip="hello_world/src/helloworld.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/hello_world/src/helloworld.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="1" selectionOffset="3244" selectionTopPixel="576"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2898" selectionTopPixel="666"/>
 </editor>
 <editor id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" partName="system.mss" path="D:/RA31-2016/LPRS2/lab5/SDK/SDK_Workspace/vga_test_bsp/system.mss" title="system.mss" tooltip="vga_test_bsp/system.mss" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/vga_test_bsp/system.mss"/>
@@ -61,7 +61,7 @@
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="vga_periph_mem.c" partName="vga_periph_mem.c" path="D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/hello_world/src/vga_periph_mem.c" title="vga_periph_mem.c" tooltip="hello_world/src/vga_periph_mem.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/hello_world/src/vga_periph_mem.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3299" selectionTopPixel="966"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3299" selectionTopPixel="900"/>
 </editor>
 </editors>
 <views>
@@ -75,6 +75,8 @@
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
 <category IMemento.internal.id="Warnings (1 item)"/>
+<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -219,6 +221,9 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/test_bsp/system.mss"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/vga_test/src/helloworld.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/hello_world/src/vga_periph_mem.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/hello_world/src/vga_periph_mem.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" path="/basic_system_hw_platform/system.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/hello_world/src/vga_periph_mem.c"/>
 </editors>
 <item historyLabel="xparameters.h" index="0">
 <position/>
@@ -277,8 +282,21 @@
 <item historyLabel="vga_periph_mem.h" index="8">
 <position info="not_deleted" x="2215" y="0"/>
 </item>
-<item active="true" historyLabel="helloworld.c" index="5">
+<item historyLabel="helloworld.c" index="5">
 <position info="not_deleted" x="3319" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="5">
+<position/>
+</item>
+<item historyLabel="vga_periph_mem.h" index="13">
+<position info="not_deleted" x="2215" y="0"/>
+</item>
+<item historyLabel="system.xml" index="14"/>
+<item historyLabel="vga_periph_mem.c" index="15">
+<position info="not_deleted" x="3299" y="0"/>
+</item>
+<item active="true" historyLabel="helloworld.c" index="5">
+<position info="not_deleted" x="2991" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
