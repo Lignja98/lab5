@@ -79,7 +79,7 @@ int main()
 			draw_square_at(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, square_x, 256);
 
 			if (direction == 1) {
-				if (square_x == 300) {
+				if (square_x == 440) {
 					direction = 0;
 				}
 				else {
@@ -87,7 +87,7 @@ int main()
 				}
 			}
 			else if (direction == 0) {
-				if (square_x == 100) {
+				if (square_x == 40) {
 					direction = 1;
 				}
 				else {
