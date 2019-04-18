@@ -91,7 +91,7 @@
         <VARIABLE IS_LABELED="TRUE" NAME="Targets" VALUE="TRUE" VIEWDISP="Bus Interface Filters" VIEWTYPE="CHECKBOX"/>
       </SET>
       <SET CLASS="FILTER" ID="Initiators" ROW_INDEX="5">
-        <VARIABLE IS_LABELED="TRUE" NAME="Initiators" VALUE="TRUE" VIEWDISP="Bus Interface Filters" VIEWTYPE="CHECKBOX"/>
+        <VARIABLE IS_LABELED="TRUE" NAME="Initiators" VALUE="FALSE" VIEWDISP="Bus Interface Filters" VIEWTYPE="CHECKBOX"/>
       </SET>
     </SET>
   </SET>

@@ -265,3 +265,111 @@
 11:19:00.858 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
 11:20:53.741 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
 11:22:26.369 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:23:48.484 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:24:20.003 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:39:21.923 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+12:08:50.426 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+13:07:37.100 INFO  - Processing command line option -hwspec D:\RA31-2016\LPRS2\lwiptest\SDK\SDK_Export\hw\system.xml. 
+13:07:38.360 INFO  - The hardware specification for project 'basic_system_hw_platform' is different from D:\RA31-2016\LPRS2\lwiptest\SDK\SDK_Export\hw\system.xml. 
+13:07:38.372 INFO  - Copied contents of D:\RA31-2016\LPRS2\lwiptest\SDK\SDK_Export\hw\system.xml into \basic_system_hw_platform\system.xml. 
+13:07:38.391 INFO  - Copied contents of D:\RA31-2016\LPRS2\lwiptest\SDK\SDK_Export\hw\system.bit into \basic_system_hw_platform\system.bit. 
+13:07:38.393 INFO  - Copied contents of D:\RA31-2016\LPRS2\lwiptest\SDK\SDK_Export\hw\system_bd.bmm into \basic_system_hw_platform\system_bd.bmm. 
+13:07:38.656 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+13:07:39.683 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+13:07:39.791 INFO  - Updating MSS for Board Support Package Project: hello_world_bsp.
+		 The following driver assignments were removed:
+			Peripheral Instance: my_peripheral_0, driver: generic_v1_00_a.
+			Peripheral Instance: rs232, driver: uartlite_v2_01_a.
+			Peripheral Instance: vga_periph_mem_0, driver: generic_v1_00_a.
+		 The following parameters were removed:
+			Component: standalone_v3_10_a, parameter: stdin.
+			Component: standalone_v3_10_a, parameter: stdout.
+		 The following new driver assignments were made:
+			Peripheral Instance: axi_ethernetlite_0, driver: emaclite_v3_04_a.
+			Peripheral Instance: axi_intc_0, driver: intc_v2_06_a.
+			Peripheral Instance: axi_timer_0, driver: tmrctr_v2_05_a.
+			Peripheral Instance: axi_uartlite_0, driver: uartlite_v2_01_a.
+ 
+13:07:40.941 INFO  - Updating hardware inferred compiler options for hello_world. 
+13:07:40.954 INFO  - Clearing existing target manager status. 
+13:07:43.245 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+13:07:51.171 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+13:33:12.503 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+11:00:32.203 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+11:02:02.168 INFO  - Processing command line option -hwspec D:\RA31-2016\LPRS2\lab5-old\SDK\SDK_Export\hw\system.xml. 
+11:02:03.031 INFO  - The hardware specification for project 'basic_system_hw_platform' is different from D:\RA31-2016\LPRS2\lab5-old\SDK\SDK_Export\hw\system.xml. 
+11:02:03.044 INFO  - Copied contents of D:\RA31-2016\LPRS2\lab5-old\SDK\SDK_Export\hw\system.xml into \basic_system_hw_platform\system.xml. 
+11:02:03.067 INFO  - Copied contents of D:\RA31-2016\LPRS2\lab5-old\SDK\SDK_Export\hw\system.bit into \basic_system_hw_platform\system.bit. 
+11:02:03.076 INFO  - Copied contents of D:\RA31-2016\LPRS2\lab5-old\SDK\SDK_Export\hw\system_bd.bmm into \basic_system_hw_platform\system_bd.bmm. 
+11:02:03.372 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+11:02:04.442 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+11:02:04.550 INFO  - Updating MSS for Board Support Package Project: hello_world_bsp.
+		 The following driver assignments were removed:
+			Peripheral Instance: axi_ethernetlite_0, driver: emaclite_v3_04_a.
+			Peripheral Instance: axi_intc_0, driver: intc_v2_06_a.
+			Peripheral Instance: axi_timer_0, driver: tmrctr_v2_05_a.
+			Peripheral Instance: axi_uartlite_0, driver: uartlite_v2_01_a.
+		 The following new driver assignments were made:
+			Peripheral Instance: my_peripheral_0, driver: generic_v1_00_a.
+			Peripheral Instance: rs232, driver: uartlite_v2_01_a.
+			Peripheral Instance: vga_periph_mem_0, driver: generic_v1_00_a.
+ 
+11:02:05.728 INFO  - Updating hardware inferred compiler options for hello_world. 
+11:02:05.760 INFO  - Clearing existing target manager status. 
+11:02:09.185 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+11:02:37.263 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:32:02.020 INFO  - Processing command line option -hwspec D:\RA31-2016\LPRS2\lab5-old\SDK\SDK_Export\hw\system.xml. 
+11:32:02.120 INFO  - The hardware specification for project 'basic_system_hw_platform' is different from D:\RA31-2016\LPRS2\lab5-old\SDK\SDK_Export\hw\system.xml. 
+11:32:02.136 INFO  - Copied contents of D:\RA31-2016\LPRS2\lab5-old\SDK\SDK_Export\hw\system.xml into \basic_system_hw_platform\system.xml. 
+11:32:02.140 INFO  - Copied contents of D:\RA31-2016\LPRS2\lab5-old\SDK\SDK_Export\hw\system.bit into \basic_system_hw_platform\system.bit. 
+11:32:02.141 INFO  - Copied contents of D:\RA31-2016\LPRS2\lab5-old\SDK\SDK_Export\hw\system_bd.bmm into \basic_system_hw_platform\system_bd.bmm. 
+11:32:02.425 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+11:32:03.360 INFO  - Updating MSS for Board Support Package Project: hello_world_bsp.
+		 The following new driver assignments were made:
+			Peripheral Instance: axi_intc_0, driver: intc_v2_06_a.
+ 
+11:32:04.118 INFO  - Updating MSS for Board Support Package Project: test_bsp.
+		 The following new driver assignments were made:
+			Peripheral Instance: axi_intc_0, driver: intc_v2_06_a.
+ 
+11:32:11.227 INFO  - Updating hardware inferred compiler options for hello_world. 
+11:32:12.045 INFO  - Updating hardware inferred compiler options for test. 
+11:32:12.067 INFO  - Clearing existing target manager status. 
+11:32:13.229 INFO  - Closing and re-opening the MSS file of ther project test_bsp 
+11:32:14.571 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+11:34:44.422 INFO  - Successfully generated D:\RA31-2016\LPRS2\lab5-old\SDK\SDK_Workspace\hello_world\src\lscript.ld. 
+11:34:44.423 INFO  - Applying linker script to all configurations of project hello_world. 
+11:34:44.423 INFO  - Setting rebuild state to true for all configurations of project hello_world. 
+11:35:42.858 INFO  - Settings changed on project hello_world_bsp. Triggering a rebuild... 
+11:35:43.182 INFO  - Refreshed build settings on project hello_world 
+11:36:41.924 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:43:50.899 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:44:19.844 INFO  - Settings changed on project hello_world_bsp. Triggering a rebuild... 
+11:44:20.119 INFO  - Refreshed build settings on project hello_world 
+11:44:48.586 INFO  - Settings changed on project hello_world_bsp. Triggering a rebuild... 
+11:44:48.864 INFO  - Refreshed build settings on project hello_world 
+11:46:08.525 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:46:29.806 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:47:06.384 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:47:24.310 WARN  - Terminating existing sessions on processor microblaze_0 
+11:47:25.628 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:47:50.244 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:48:08.177 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:49:06.711 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:49:13.460 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:49:35.029 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:49:50.090 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:51:39.109 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+11:51:43.337 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+11:51:43.342 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 

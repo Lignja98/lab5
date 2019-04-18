@@ -171,6 +171,8 @@ entity vga_periph_mem is
     red_o          : out std_logic_vector(7 downto 0);
     green_o        : out std_logic_vector(7 downto 0);
     blue_o         : out std_logic_vector(7 downto 0);
+	--
+	irq_o          : out std_logic;
     -- ADD USER PORTS ABOVE THIS LINE ------------------
 
     -- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -403,6 +405,8 @@ begin
       red_o          => red_o,
       green_o        => green_o,
       blue_o         => blue_o,
+	  --
+	  irq_o          => irq_o,
       -- MAP USER PORTS ABOVE THIS LINE ------------------
 
       Bus2IP_Clk                     => ipif_Bus2IP_Clk,

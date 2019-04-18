@@ -40,11 +40,17 @@
 #include "xparameters.h"
 #include "xio.h"
 #include "vga_periph_mem.h"
+#include "xintc.h"
 
-// Ne treba font, circle
-// Treba pomeranje
+XIntc Intc;
 
-void print(char *str);
+static volatile int can_continue = 0;
+
+void vga_irq_handler(void *arg) {
+	(void)arg;
+
+	can_continue = 1;
+}
 
 int main()
 {
@@ -56,18 +62,28 @@ int main()
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x04, 0x3);// display_mode  1
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x08, 0x0);// show frame      2
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x0C, 0x1);// font size       3
+    VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x22, 0x1); // Enable irq
+    VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x24, 480); // Set tc
     set_foreground_color(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 0xFFFF00);// foreground 4
     set_background_color(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 0xDD0033);// background color 5
     //VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x18, 0xFFFF00);// frame color      6
 
-    print("Hello World\n\r");
+    XStatus Status = XIntc_Initialize (&Intc, XPAR_INTC_0_DEVICE_ID);
+    Status = XIntc_Connect(&Intc, XPAR_AXI_INTC_0_VGA_PERIPH_MEM_0_IRQ_O_INTR, vga_irq_handler, NULL);
+    Status = XIntc_Start(&Intc, XIN_REAL_MODE);
+    XIntc_Enable  (&Intc, XPAR_AXI_INTC_0_VGA_PERIPH_MEM_0_IRQ_O_INTR);
+
+	microblaze_enable_interrupts();
+
+    print("Configuration finished\n\r");
 
     clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     //draw_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     //draw_rectangle(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 256, 128);
 
-    //print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 6);
+    set_cursor(500);
+    print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 6);
 
     while (1) {
     	int square_x = 100;
@@ -95,9 +111,10 @@ int main()
 				}
 			}
 
-			for (j = 0; j < 3e3; j++) {
+			while (!can_continue) {
 
 			}
+			can_continue = 0;
 
 			print_char(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, ' ');
 		}
