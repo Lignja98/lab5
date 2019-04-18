@@ -373,3 +373,40 @@
 	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
 
 11:51:43.342 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+11:55:05.505 WARN  - Terminating existing sessions on processor microblaze_0 
+11:55:06.852 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:55:37.320 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Target with ID 0 in the System
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.setResetOnRun(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+11:55:38.425 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:56:47.146 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:56:53.016 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:57:42.611 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:58:09.665 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:58:19.302 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:58:44.066 WARN  - Terminating existing sessions on processor microblaze_0 
+11:58:45.366 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+12:00:09.621 INFO  - Time out for XMD transaction is 60000
+If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx SDK -> XMD Startup 
+12:00:09.621 ERROR - Timeout occured while waiting to get reply for command "targets 0" 
+12:00:09.623 ERROR - Unexpected error while launching program. java.lang.RuntimeException: 
+	at com.xilinx.sdk.targetmanager.internal.TM.setResetOnRun(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+12:00:34.129 WARN  - Terminating existing sessions on processor microblaze_0 
+12:00:34.249 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:00:35.349 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+12:00:45.947 WARN  - Terminating existing sessions on processor microblaze_0 
+12:00:57.006 WARN  - Terminating existing sessions on processor microblaze_0 
+12:01:05.286 WARN  - Terminating existing sessions on processor microblaze_0 
+12:01:14.821 WARN  - Terminating existing sessions on processor microblaze_0 
+12:01:18.241 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+12:01:41.720 INFO  - FPGA configured successfully with bitstream "D:/RA31-2016/LPRS2/lab5-old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+12:02:58.844 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

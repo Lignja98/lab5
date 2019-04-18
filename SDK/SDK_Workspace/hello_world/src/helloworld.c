@@ -42,21 +42,49 @@
 #include "vga_periph_mem.h"
 #include "xintc.h"
 
-XIntc Intc;
+static XIntc Intc;
 
-static volatile int can_continue = 0;
+static int cursor_location = 0;
+static int square_x = 0;
+static int direction = 1;
 
 void vga_irq_handler(void *arg) {
 	(void)arg;
 
-	can_continue = 1;
+	print_char(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, ' ');
+	set_cursor(cursor_location);
+	print_char(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 'Q');
+
+	draw_square_at(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, square_x, 256);
+
+	if (direction == 1) {
+		if (square_x == 440) {
+			direction = 0;
+		}
+		else {
+			++square_x;
+		}
+	}
+	else if (direction == 0) {
+		if (square_x == 40) {
+			direction = 1;
+		}
+		else {
+			--square_x;
+		}
+	}
+
+	if (cursor_location < 4800) {
+		++cursor_location;
+	}
+	else {
+		cursor_location = 0;
+	}
 }
 
 int main()
 {
     init_platform();
-    unsigned char string_s[] = "LPRS 2\n";
-    int i, j;
 
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x00, 0x0);// direct mode   0
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x04, 0x3);// display_mode  1
@@ -68,61 +96,19 @@ int main()
     set_background_color(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 0xDD0033);// background color 5
     //VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x18, 0xFFFF00);// frame color      6
 
-    XStatus Status = XIntc_Initialize (&Intc, XPAR_INTC_0_DEVICE_ID);
-    Status = XIntc_Connect(&Intc, XPAR_AXI_INTC_0_VGA_PERIPH_MEM_0_IRQ_O_INTR, vga_irq_handler, NULL);
-    Status = XIntc_Start(&Intc, XIN_REAL_MODE);
-    XIntc_Enable  (&Intc, XPAR_AXI_INTC_0_VGA_PERIPH_MEM_0_IRQ_O_INTR);
+    XIntc_Initialize (&Intc, XPAR_INTC_0_DEVICE_ID);
+    XIntc_Connect(&Intc, XPAR_AXI_INTC_0_VGA_PERIPH_MEM_0_IRQ_O_INTR, vga_irq_handler, NULL);
+    XIntc_Start(&Intc, XIN_REAL_MODE);
+    XIntc_Enable(&Intc, XPAR_AXI_INTC_0_VGA_PERIPH_MEM_0_IRQ_O_INTR);
 
 	microblaze_enable_interrupts();
+	clear_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
 
     print("Configuration finished\n\r");
 
-    clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
-    clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
-    //draw_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
-    //draw_rectangle(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 256, 128);
-
-    set_cursor(500);
-    print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 6);
-
     while (1) {
-    	int square_x = 100;
-    	int direction = 1;
-		for (i = 0; i < 4800; i++) {
-			set_cursor(i);
-			print_char(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 'Q');
 
-			draw_square_at(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, square_x, 256);
-
-			if (direction == 1) {
-				if (square_x == 440) {
-					direction = 0;
-				}
-				else {
-					++square_x;
-				}
-			}
-			else if (direction == 0) {
-				if (square_x == 40) {
-					direction = 1;
-				}
-				else {
-					--square_x;
-				}
-			}
-
-			while (!can_continue) {
-
-			}
-			can_continue = 0;
-
-			print_char(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, ' ');
-		}
     }
-    set_cursor(350);
-    print_char(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, 'Q');
-
-    //clear_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
 
     return 0;
 }

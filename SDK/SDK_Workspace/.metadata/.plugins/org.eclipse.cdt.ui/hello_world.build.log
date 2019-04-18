@@ -1,6 +1,6 @@
-11:50:10 **** Incremental Build of configuration Debug for project hello_world ****
+12:00:29 **** Incremental Build of configuration Debug for project hello_world ****
 make all 
 make: Ništa za napraviti za `all'.
 
-11:50:10 Build Finished (took 128ms)
+12:00:29 Build Finished (took 130ms)
 
